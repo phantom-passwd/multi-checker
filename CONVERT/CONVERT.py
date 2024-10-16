@@ -16,7 +16,7 @@ class EmailPasswordExtractor:
     def log(message):
         print(f"{colorama.Fore.LIGHTBLUE_EX}[ {EmailPasswordExtractor.get_time()} ] {colorama.Fore.LIGHTBLACK_EX} --->> {colorama.Fore.LIGHTMAGENTA_EX + colorama.Fore.LIGHTCYAN_EX}{message}{colorama.Fore.RESET}")
 
-    def extract_emails_and_passwords(self):
+    def extract_all(self):
         pattern = re.compile(
             r'^(?:https?://[^\s]+/(?:id/login|account)|(?:www\.)?[^\s]+):([^\s:]+):([^\s]+)|^(?:https?://[^\s]+/(?:id/login|account) )([^\s ]+)\s+([^\s]+)|([^\s]+):([^\s]+)'
         )
@@ -60,6 +60,6 @@ if __name__ == "__main__":
     colorama.init()
     email = EmailPasswordExtractor()
     email.log("LAUNCHING...")
-    email.extract_emails_and_passwords()
+    email.extract_all()
     email.clean_output_file() 
     email.save_summary()
