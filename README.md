@@ -58,3 +58,9 @@ pip install requests beautifulsoup4 colorama clear
    python CONVERT.py
    ```
    - The script will extract valid email:password pairs from the specified input file and save them in `sorted.txt`. 🗂
+
+
+## License 📄
+
+This project is licensed under License. See the [LICENSE](LICENSE) file for details.
+
